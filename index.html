@@ -4,12 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Etch a skEtch</title>
     <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <button onclick="clear()">Clear</button>
+    <h1>Etch-a-skEtch</h1>
+    <div class="buttons">
+      <button class="clear">Clear</button>
+      <button class="color">
+        Color
+        <input type="color" value="#000000" />
+      </button>
+      <button class="rainbow">Rainbow</button>
+      <button class="eraser">Eraser</button>
+      <div class="size">
+        <div id="sizeValue" class="size-value">16 x 16</div>
+        <input
+          class="sizeSlider"
+          type="range"
+          value="16"
+          min="1"
+          max="64"
+          step="1"
+        />
+      </div>
+    </div>
     <div class="container"></div>
+    <footer>
+      <div class="github">
+        <p>Copyright © 2021 MNasser02</p>
+        <a href="https://github.com/MNasser02" target="_blank">
+          <i class="fab fa-github" aria-hidden="true"></i
+        ></a>
+      </div>
+      <p>~ The Odin Project ~</p>
+    </footer>
   </body>
 </html>
