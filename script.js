@@ -76,8 +76,8 @@ function erase(){
 function size(e){
     dimension = e.target.value;
 
-    //remove all boxes
-    
+    //remove all boxes for better performance
+    grid.innerHTML='';  
     grid.style.gridTemplateColumns= `repeat(${dimension}, 1fr)`;
     grid.style.gridTemplateRows= `repeat(${dimension}, 1fr)`;
 
