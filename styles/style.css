@@ -5,6 +5,15 @@
   font-family: "Comic Sans Bold", cursive;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+
+  justify-content: space-around;
+}
+
 h1 {
   text-align: center;
   font-size: 50px;
@@ -12,7 +21,7 @@ h1 {
   font-weight: 900;
 }
 
-body {
+main {
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -23,7 +32,6 @@ body {
   width: 500px;
   height: 500px;
   border: 3px dashed black;
-  margin-bottom: 16px;
 }
 
 .buttons {
@@ -133,8 +141,22 @@ footer {
 /* media queries */
 
 @media (max-width: 650px) {
+  h1 {
+    font-size: 40px;
+  }
   .container {
     height: 400px;
     width: 400px;
+  }
+  .buttons {
+    gap: 8px;
+  }
+  button,
+  input[type="range"] {
+    font-size: 10px;
+    width: 60px;
+  }
+  #sizeValue {
+    font-size: 16px;
   }
 }
