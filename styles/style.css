@@ -7,7 +7,7 @@
 
 h1 {
   text-align: center;
-  font-size: 70px;
+  font-size: 50px;
   color: rgb(183, 183, 236);
   font-weight: 900;
 }
@@ -100,7 +100,7 @@ input[type="range"]::-webkit-slider-thumb {
 #sizeValue {
   text-align: center;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 24px;
 }
 
 footer,
