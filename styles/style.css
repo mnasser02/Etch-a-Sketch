@@ -1,0 +1,18 @@
+.container {
+  display: grid;
+  width: 960px;
+}
+
+.container div {
+  border: 1px solid black;
+  padding-bottom: 100%;
+}
+
+button {
+  padding: 5px 20px;
+  background-color: rgb(56, 56, 143);
+  border-radius: 4px;
+  border: none;
+  margin: 10px;
+  color: white;
+}
