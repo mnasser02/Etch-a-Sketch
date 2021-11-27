@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Pacifico", cursive;
+  font-family: "Comic Sans Bold", cursive;
 }
 
 h1 {
@@ -38,14 +38,16 @@ input {
   cursor: pointer;
 }
 button {
-  font-size: 1em;
-  padding: 5px 20px;
+  font-size: 15px;
+  padding: 5px 10px;
   background-color: rgb(56, 56, 143);
   border-radius: 4px;
   border: none;
   margin: 10px;
   color: white;
   margin: 0;
+  width: 100px;
+  height: 40px;
 }
 
 button,
@@ -66,11 +68,12 @@ input[type="color"]:active {
 input[type="color"] {
   -webkit-appearance: none;
   border: none;
-  width: 20px;
+  width: 30px;
   height: 10px;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
   padding: 0;
+  margin: 0;
 }
 input[type="color"]::-webkit-color-swatch {
   border: none;
@@ -125,4 +128,13 @@ footer {
 }
 .fa-github:hover {
   transform: rotate(360deg) scale(1.2);
+}
+
+/* media queries */
+
+@media (max-width: 650px) {
+  .container {
+    height: 400px;
+    width: 400px;
+  }
 }

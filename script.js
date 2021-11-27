@@ -1,30 +1,6 @@
 const grid = document.querySelector('.container');
 var dimension = 16;
 let currentMode = "rainbow";
-initial(dimension);
-
-//intialize with 16x16 grid
-function initial(dimension){
-    grid.style.gridTemplateColumns= `repeat(${dimension}, 1fr)`;
-    grid.style.gridTemplateRows= `repeat(${dimension}, 1fr)`;
-    for (let i = 0; i < dimension**2; i++)
-    {    
-        divs = document.createElement('div');
-        grid.appendChild(divs);
-    }
-}
-
-//generate random number between min and max
-function randomBetween(min, max) {
-    return min + Math.floor(Math.random() * (max - min + 1));
-}
-
-//set all boxes to white
-function clear(){
-    let boxes = document.querySelectorAll('.container div');
-    boxes.forEach( box => box.style.backgroundColor = "white");
- }
-
 //used later for dispatching events manually
 const clickEvent = new Event('click');
 const inputEvent = new Event('input');
@@ -44,6 +20,31 @@ eraser.addEventListener('click', erase);
 const sizeSlider = document.querySelector('.sizeSlider');
 sizeSlider.addEventListener('input', size);
 
+
+initial(dimension);
+//intialize with 16x16 grid and rainbow coloring
+function initial(dimension){
+    grid.style.gridTemplateColumns= `repeat(${dimension}, 1fr)`;
+    grid.style.gridTemplateRows= `repeat(${dimension}, 1fr)`;
+    for (let i = 0; i < dimension**2; i++)
+    {    
+        divs = document.createElement('div');
+        grid.appendChild(divs);
+    }
+
+    createRainbow();
+}
+
+//generate random number between min and max
+function randomBetween(min, max) {
+    return min + Math.floor(Math.random() * (max - min + 1));
+}
+
+//set all boxes to white
+function clear(){
+    let boxes = document.querySelectorAll('.container div');
+    boxes.forEach( box => box.style.backgroundColor = "white");
+ }
 
 function color(color){
     currentMode = "color";
@@ -76,7 +77,7 @@ function size(e){
     dimension = e.target.value;
 
     //remove all boxes
-    grid.innerHTML='';  
+    
     grid.style.gridTemplateColumns= `repeat(${dimension}, 1fr)`;
     grid.style.gridTemplateRows= `repeat(${dimension}, 1fr)`;
 
