@@ -14,6 +14,15 @@ body {
   justify-content: space-around;
 }
 
+main {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/**** Header ****/
+
 h1 {
   text-align: center;
   font-size: 50px;
@@ -21,12 +30,8 @@ h1 {
   font-weight: 900;
 }
 
-main {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/**** Grid ****/
+
 .container {
   display: grid;
   width: 500px;
@@ -57,7 +62,7 @@ button {
   width: 100px;
   height: 40px;
 }
-
+/* Buttons */
 button,
 input[type="color"] {
   transition: transform 0.1s ease-in-out;
@@ -114,6 +119,7 @@ input[type="range"]::-webkit-slider-thumb {
   font-size: 24px;
 }
 
+/**** Footer ****/
 footer,
 .github {
   display: flex;
@@ -138,7 +144,7 @@ footer {
   transform: rotate(360deg) scale(1.2);
 }
 
-/* media queries */
+/**** media queries ****/
 
 @media (max-width: 650px) {
   h1 {
